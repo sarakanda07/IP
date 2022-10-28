@@ -1,0 +1,41 @@
+import java.util.Scanner; 
+public class Frase{ 
+   private String palavraA; 
+	private String palavraB; 
+	
+	public String getPalavraA(){ 
+	 return this.palavraA;
+	} 
+	public void setPalavraA(String a){ 
+	 this.palavraA = a;
+	} 
+	public String getPalavraB(){ 
+	 return this.palavraB;
+	} 
+	public void setPalavraB(String b){ 
+	  this.palavraB = b;
+	} 
+	
+	public void imprimeFrase(){ 
+	 String a, b; 
+		a = this.getPalavraA();
+		b = this.getPalavraB(); 
+				
+		System.out.println(a + " " + b);
+	} 
+	public static void main(String args[]){ 
+	  Frase oracao; 
+		oracao = new Frase(); 
+		
+		Scanner ler = new Scanner(System.in); 
+		
+		String a = ler.nextLine();
+		String b = ler.nextLine(); 
+		
+		oracao.setPalavraA(a); 
+		oracao.setPalavraB(b);
+		
+		oracao.imprimeFrase();
+	}
+
+}
